@@ -74,4 +74,6 @@ SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON trans
 # Data Cleaning and ETL Using Power BI:
 (i) Filtered blank rows in sales markets table.
 (ii) select * from sales.transactions  where sales_amount<=0;(Removed Rows having sales_amount as 0 and -1 from sales transaction table).
-(iii) 
+
+# Data Modelling:
+
