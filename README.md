@@ -73,7 +73,13 @@ SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON trans
 
 # Data Cleaning and ETL Using Power BI:
 (i) Filtered blank rows in sales markets table.
+
 (ii) select * from sales.transactions  where sales_amount<=0;(Removed Rows having sales_amount as 0 and -1 from sales transaction table).
 
-# Data Modelling:
+(iii) Converting USD to INR : = Table.AddColumn(#"Filtered Rows", "Normalized Currency", each if [currency] = "USD" then [sales_amount] *75 else [sales_amount])
+
+# Data Modelling: (Star Schema)
+![image](https://user-images.githubusercontent.com/65170754/89860132-57b67300-dbc0-11ea-8f10-586100943ee0.png)
+
+
 
